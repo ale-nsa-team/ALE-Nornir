@@ -1,0 +1,4 @@
+{% for iface in interfaces %}
+interfaces port {{ iface.name }} alias "TO_{{ iface.peer }}_{{ iface.peer_if }}"
+ip interface "TO_{{ iface.peer }}_{{ iface.peer_if }}" address {{ iface.ip_address }}/{{ iface.subnet_mask }} rtr-port port {{ iface.name }} untagged vlan {{ iface.vlan_id }} admin-state enable
+{% endfor %}

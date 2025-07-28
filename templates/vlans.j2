@@ -1,0 +1,5 @@
+{% for vlan in vlans %}
+vlan {{ vlan.id }} admin-state enable name {{ vlan.name }}
+vlan {{ vlan.id }} members port {{ vlan.members }} untagged
+ip interface int_vl{{ vlan.id }} address {{ vlan.ip }} vlan {{ vlan.id }} admin-state enable
+{% endfor %}

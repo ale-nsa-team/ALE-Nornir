@@ -1,0 +1,6 @@
+spb bvlan {{ spb.bvlan }}
+spb isis control-bvlan {{ spb.control_bvlan }}
+{% for port in spb.ports %}
+spb isis interface port {{ port }}
+{% endfor %}
+spb isis admin-state {{ spb.admin_state }}
