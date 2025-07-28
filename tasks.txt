@@ -1,0 +1,43 @@
+   #### VLAN and Gateways Config ####
+
+    vlan_interfaces = task.run(
+        task=template_file,
+        template='templates/vlans.j2',
+        path='./',
+        **task.host
+    )
+    vlan_config = vlan_interfaces.result
+    task.run(
+        task=napalm_configure,
+        configuration=vlan_config
+    )
+
+    #### L3 Interfaces Config ####
+
+    l3_interfaces = task.run(
+        task=template_file,
+        template='templates/l3_interfaces.j2',
+        path='./',
+        **task.host
+    )
+    l3_config = l3_interfaces.result
+    task.run(
+        task=napalm_configure,
+        configuration=l3_config
+    )
+
+    
+    #### SPB-ISIS Config ####
+
+    spb_isis = task.run(
+        task=template_file,
+        template='templates/spb_isis.j2',
+        path='./',
+        **task.host
+    )
+    spb_config = spb_isis.result
+    task.run(
+        task=napalm_configure,
+        configuration=spb_config
+    )
+
