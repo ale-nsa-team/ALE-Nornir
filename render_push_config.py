@@ -3,7 +3,7 @@ from nornir_jinja2.plugins.tasks import template_file
 from nornir_utils.plugins.functions import print_result
 from nornir_napalm.plugins.tasks import napalm_configure
 
-nr = InitNornir(config_file='config.yaml', dry_run=True) ### Change the dry-run setting here ### 
+nr = InitNornir(config_file='nornir/config.yaml', dry_run=True) ### Change the dry-run setting here ### 
 
 def render_config_and_push(task):
     

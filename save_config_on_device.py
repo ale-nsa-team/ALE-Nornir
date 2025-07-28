@@ -2,7 +2,7 @@ from nornir import InitNornir
 from nornir_napalm.plugins.tasks import napalm_cli
 from nornir_utils.plugins.functions import print_result
 
-nr = InitNornir(config_file='config.yaml')
+nr = InitNornir(config_file='nornir/config.yaml')
 
 def save_config_with_cli(task):
     task.run(
