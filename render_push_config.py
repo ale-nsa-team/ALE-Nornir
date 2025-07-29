@@ -7,19 +7,19 @@ nr = InitNornir(config_file='config.yaml', dry_run=True) ### Change the dry-run 
 
 def render_config_and_push(task):
     
-   #### VLAN and Gateways Config ####
 
-    vlan_interfaces = task.run(
+    render_config = task.run(
         task=template_file,
         template='templates/vlans.j2',
         path='./',
         **task.host
     )
-    vlan_config = vlan_interfaces.result
+    rendered_config = render_config.result
     task.run(
         task=napalm_configure,
-        configuration=vlan_config
+        configuration=rendered_config
     )
 
 result = nr.run(task=render_config_and_push)
 print_result(result)
+
