@@ -11,7 +11,7 @@ This repository provides sample Nornir/NAPALM workflows and Jinja2 templates to 
 - Edit defaults.yaml (platform, credentials) and hosts.yaml (devices and data: VLANs, links).
 - Adjust templates/ if needed.
 - Preview changes:
-```python render_push_config.py (dry‑run by default)```
+```python render_push_config.py``` (dry‑run by default)
 
 - Apply changes:
 Switch ```dry_run``` to False (global in InitNornir or per task) and re‑run ```python render_push_config.py```.
