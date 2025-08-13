@@ -1,6 +1,6 @@
 # ALE-Nornir
 
-This repository provides reusable Nornir/NAPALM workflows and Jinja2 templates to automate on Alcatel‑Lucent Enterprise OmniSwitch AOS:
+This repository provides sample Nornir/NAPALM workflows and Jinja2 templates to automate on Alcatel‑Lucent Enterprise OmniSwitch AOS:
 - VLAN configuration (create, name, port membership)
 - Layer‑3 inter‑switch interfaces (/31 links, SVI/L3 interfaces)
 - SPB/ISIS backbone deployment and enablement
@@ -11,7 +11,7 @@ This repository provides reusable Nornir/NAPALM workflows and Jinja2 templates t
 - Edit defaults.yaml (platform, credentials) and hosts.yaml (devices and data: VLANs, links).
 - Adjust templates/ if needed.
 - Preview changes:
-```python render_push_config.py (dry‑run by default)```
+```python render_push_config.py``` (dry‑run by default)
 
 - Apply changes:
 Switch ```dry_run``` to False (global in InitNornir or per task) and re‑run ```python render_push_config.py```.

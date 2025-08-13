@@ -23,7 +23,7 @@ def export_config_and_scp(task):
     sftp.close()
     ssh.close()
 
-host = nr
+host = nr # export all devices config by default
 # host = nr.filter(hostname="192.168.12.247") ## Filter by IP
 # host = nr.filter(name="switch1") ## Filter by inventory name
 
