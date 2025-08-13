@@ -20,7 +20,6 @@ Switch dry_run to False (global in InitNornir or per task) and re‑run ```pytho
 ```python save_config_on_device.py```
 
 - Backup configs:
-
 ```python export_config.py``` (files stored under backups/)
 
 
