@@ -7,19 +7,19 @@ This repository provides reusable Nornir/NAPALM workflows and Jinja2 templates t
 
 ## Usage 
 
-1. Create a Python virtual environment and install requirements (Nornir, nornir‑napalm, nornir‑jinja2, nornir‑utils, napalm, napalm‑aos).
-2. Edit defaults.yaml (platform, credentials) and hosts.yaml (devices and data: VLANs, links).
-3. Adjust templates/ if needed.
-4. Preview changes:
+- Create a Python virtual environment and install requirements (Nornir, nornir‑napalm, nornir‑jinja2, nornir‑utils, napalm, napalm‑aos).
+- Edit defaults.yaml (platform, credentials) and hosts.yaml (devices and data: VLANs, links).
+- Adjust templates/ if needed.
+- Preview changes:
 ```python render_push_config.py (dry‑run by default)```
 
-5. Apply changes:
+- Apply changes:
 Switch dry_run to False (global in InitNornir or per task) and re‑run ```python render_push_config.py```.
 
-6. Persist configs (optional):
+- Persist configs (optional):
 ```python save_config_on_device.py```
 
-7. Backup configs:
+- Backup configs:
 
 ```python export_config.py``` (files stored under backups/)
 
