@@ -13,15 +13,13 @@ This repository provides reusable Nornir/NAPALM workflows and Jinja2 templates t
 4. Preview changes:
 ```python render_push_config.py (dry‑run by default)```
 
-5.Apply changes:
+5. Apply changes:
+Switch dry_run to False (global in InitNornir or per task) and re‑run ```python render_push_config.py```.
 
-    Switch dry_run to False (global in InitNornir or per task) and re‑run.
-
-Persist configs (optional):
-
+6. Persist configs (optional):
 ```python save_config_on_device.py```
 
-Backup configs:
+7. Backup configs:
 
 ```python export_config.py``` (files stored under backups/)
 
